@@ -1,9 +1,6 @@
 ﻿class OutputField extends React.Component {
     constructor(props) {
         super(props);
-        this.state= {
-            output: this.props.alph || []
-        }
     }
 
     renderOutList = () => {

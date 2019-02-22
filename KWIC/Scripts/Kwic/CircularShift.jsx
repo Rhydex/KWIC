@@ -8,10 +8,10 @@
     }
     componentWillReceiveProps(newProps) {
         if (this.props == newProps) {return;}
-        this.splitLines();
+        this.splitLines(newProps);
     }
-    splitLines = () => {
-        let tempList = this.state.list;
+    splitLines = (newProps) => {
+        let tempList = newProps.list;
         let listOfSplits = [];
         tempList.forEach((line) => {
             listOfSplits.push(line.split(" "));
