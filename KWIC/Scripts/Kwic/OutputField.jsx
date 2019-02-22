@@ -1,4 +1,4 @@
-﻿class LineField extends React.Component {
+﻿class OutputField extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,9 +28,8 @@
 
     render() {
         return (
-            <div>
+            <div className="well">
                 {this.renderList()}
-                <CircularShift list={this.state.list} />
             </div>
         )
     }

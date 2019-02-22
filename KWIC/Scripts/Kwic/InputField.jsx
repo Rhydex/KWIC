@@ -3,29 +3,19 @@
     constructor() {
         super();
         this.state= {
-            input: "",
             list: []
         }
     };
 
-    updateInputValue = (e) => {
-        this.setState ({
-            input: e.target.value
-        })
-    }
     onAdd = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        let input = e.currentTarget.parentElement[0].value;
         let tempList = this.state.list;
-        tempList.push(this.state.input);
+        tempList.push(input);
         this.setState({
             list: tempList
         })
-    }
-    renderLineField = () => {
-        return (
-            <LineField list={this.state.list}/>
-        )
     }
     render() {
         return(
@@ -33,7 +23,6 @@
                 <form className="row">
                     <input 
                         className="col-sm-10"
-                        onChange={e => this.updateInputValue(e)}
                     >
                     </input>
                     <button 
@@ -43,7 +32,7 @@
                         Add
                     </button>
                 </form>
-                {this.renderLineField()}
+                <LineField list={this.state.list}/>
             </div>
         )
     }

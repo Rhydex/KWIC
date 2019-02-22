@@ -13,11 +13,6 @@
                         <InputField />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-sm-12">
-                        <OutputField />
-                    </div>
-                </div>
             </div>
         )
     }
