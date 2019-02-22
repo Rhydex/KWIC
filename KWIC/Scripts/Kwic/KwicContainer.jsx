@@ -18,16 +18,6 @@
     }
 }
 
-const OutputField = () => {
-    return(
-        <div>
-
-        </div>
-    )
-}
-
-
-
 (function() {
     ReactDOM.render(
         <KwicContainer />,
