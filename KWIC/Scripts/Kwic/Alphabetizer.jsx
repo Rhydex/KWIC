@@ -1,14 +1,15 @@
 ﻿class Alphabetizer extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            list: this.props.list || []
+        this.state= {
+            shift: this.props.shift || [],
+            alph: []
         }
     }
     render() {
         return(
             <div>
-                <OutputField list={this.state.list} />
+                <OutputField alph={this.props.shift} />
             </div>
             
         )

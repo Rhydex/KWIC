@@ -6,11 +6,11 @@
         }
     }
 
-    renderList = () => {
+    renderLineList = () => {
         let tempList = this.state.list;
         let formattedList = [];
-        tempList.forEach(function(ele) {
-            formattedList.push(<div>{ele}</div>);
+        tempList.forEach(function(ele, index) {
+            formattedList.push(<div key={index}>{ele}</div>);
         })
         if(this.state.list) {
             return (
@@ -29,7 +29,7 @@
     render() {
         return (
             <div>
-                {this.renderList()}
+                {this.renderLineList()}
                 <CircularShift list={this.state.list} />
             </div>
         )
